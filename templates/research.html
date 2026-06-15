@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Paper Explainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+
+<section class="page">
+    <h1>Research Paper Explainer</h1>
+    <p>Upload the paper in PDF Chatbot page first, then use these options.</p>
+
+    <div class="research-buttons">
+        <button onclick="runResearchTask('summary')">Paper Summary</button>
+        <button onclick="runResearchTask('beginner')">Beginner Explanation</button>
+        <button onclick="runResearchTask('focus')">How to Read / Focus Points</button>
+        <button onclick="runResearchTask('gaps')">Research Gaps</button>
+        <button onclick="runResearchTask('ideas')">New Paper Ideas</button>
+        <button onclick="runResearchTask('writing')">Paper Writing Guide</button>
+        <button onclick="runResearchTask('viva')">Presentation & Viva</button>
+    </div>
+
+    <div class="result-card">
+
+        <div class="result-title">
+            Research Analysis
+        </div>
+    
+        <div id="researchResult" class="result-content">
+        </div>
+        
+    
+    </div>
+</section>
+
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

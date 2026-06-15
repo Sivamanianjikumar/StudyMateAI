@@ -1,0 +1,40 @@
+<nav class="navbar">
+
+    <div class="logo">
+        StudyMate AI
+    </div>
+
+    <div class="menu-toggle"
+         onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="/">Home</a>
+        <a href="/chatbot">Chatbot</a>
+        <a href="/research">Research</a>
+        <a href="/notes">Notes</a>
+        <a href="/resume">Resume</a>
+        <a href="/planner">Planner</a>
+
+        {% if session.get('username') %}
+
+            <span class="user-name">
+                Welcome, {{ session['username'] }}
+            </span>
+
+            <a href="/history-page">History</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+
+        {% else %}
+
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+
+        {% endif %}
+
+    </div>
+
+</nav>

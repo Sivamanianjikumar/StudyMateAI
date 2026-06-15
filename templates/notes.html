@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="animated-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+{% include 'navbar.html' %}
+
+
+<section class="page">
+
+    <h1>Notes & Question Generator</h1>
+
+    <p>
+        Upload PDF first in PDF Chatbot page,
+        then generate notes and questions.
+    </p>
+
+    <div class="research-buttons">
+
+        <button onclick="runNotesTask('short_notes')">
+            Short Notes
+        </button>
+
+        <button onclick="runNotesTask('detailed_notes')">
+            Detailed Notes
+        </button>
+
+        <button onclick="runNotesTask('important_points')">
+            Important Points
+        </button>
+
+        <button onclick="runNotesTask('mcq')">
+            MCQs
+        </button>
+
+        <button onclick="runNotesTask('two_marks')">
+            2 Marks Questions
+        </button>
+
+        <button onclick="runNotesTask('five_marks')">
+            5 Marks Questions
+        </button>
+
+        <button onclick="runNotesTask('ten_marks')">
+            10 Marks Questions
+        </button>
+
+        <button onclick="runNotesTask('flashcards')">
+            Flashcards
+        </button>
+
+        <button onclick="runNotesTask('interview')">
+            Interview Questions
+        </button>
+
+        <button onclick="runNotesTask('revision')">
+            Revision Sheet
+        </button>
+
+    </div>
+
+    <div class="result-card">
+
+        <div class="result-title">
+            Generated Notes
+        </div>
+    
+        <div id="notesResult" class="result-content">
+        </div>
+
+        <button class="download-btn"
+        onclick="downloadNotes()">
+    📥 Download PDF
+      </button>
+    
+    </div>
+
+</section>
+
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

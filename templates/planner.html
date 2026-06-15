@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Planner AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+
+<section class="page">
+
+<h1>Study Planner AI</h1>
+
+<input
+    type="text"
+    id="subject"
+    placeholder="Enter Subject"
+/>
+
+<input
+    type="number"
+    id="days"
+    placeholder="Days Available"
+/>
+
+<input
+    type="number"
+    id="hours"
+    placeholder="Hours Per Day"
+/>
+
+<button onclick="generatePlan()">
+Generate Plan
+</button>
+
+<div class="result-card">
+
+    <div class="result-title">
+        Study Plan
+    </div>
+
+    <div id="planResult" class="result-content">
+    </div>
+   
+
+</div>
+
+</div>
+
+</section>
+
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+
+<section class="page">
+
+<h1>Resume Analyzer</h1>
+
+<div class="research-buttons">
+
+<button onclick="runResumeTask('ats')">
+ATS Score
+</button>
+
+<button onclick="runResumeTask('skills')">
+Skills Extraction
+</button>
+
+<button onclick="runResumeTask('missing')">
+Missing Skills
+</button>
+
+<button onclick="runResumeTask('strengths')">
+Strengths
+</button>
+
+<button onclick="runResumeTask('weaknesses')">
+Weaknesses
+</button>
+
+<button onclick="runResumeTask('improve')">
+Improve Resume
+</button>
+
+<button onclick="runResumeTask('projects')">
+Project Suggestions
+</button>
+
+<button onclick="runResumeTask('interview')">
+Interview Questions
+</button>
+
+<button onclick="runResumeTask('roles')">
+Recommended Roles
+</button>
+
+</div>
+
+<div class="result-card">
+
+    <div class="result-title">
+        Resume Analysis
+    </div>
+
+    <div id="resumeResult" class="result-content">
+    </div>
+   
+
+</div>
+
+</section>
+
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

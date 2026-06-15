@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="/static/css/style.css">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+    <h1>
+        Welcome {{ session['username'] }}
+    </h1>
+
+    <div class="dashboard-grid">
+
+        <div class="feature-card">
+            <h3>PDF Chatbot</h3>
+            <p>Ask questions from PDFs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Research Papers</h3>
+            <p>Research paper analysis.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Notes</h3>
+            <p>Generate notes and MCQs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Resume Analysis</h3>
+            <p>Analyze resumes.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Study Planner</h3>
+            <p>Create study plans.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

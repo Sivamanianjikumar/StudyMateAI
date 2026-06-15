@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>History - ScholarAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="animated-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="history-page">
+
+    <h1 class="history-title">
+        My AI History
+    </h1>
+
+    <input
+        type="text"
+        id="historySearch"
+        placeholder="🔍 Search history..."
+        onkeyup="filterHistory()"
+    >
+
+    <div id="historyContainer">
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script>
+loadHistory();
+</script>
+
+</body>
+</html>

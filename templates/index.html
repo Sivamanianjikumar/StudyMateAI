@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudyMate AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+   
+{% include 'navbar.html' %}
+
+
+<section class="hero">
+    <h1>StudyMate AI</h1>
+    <p>RAG-Based Generative AI Learning Assistant</p>
+
+    <div class="cards">
+        <a class="card" href="/chatbot">
+            <h3>PDF Chatbot</h3>
+            <p>Upload PDF and ask questions.</p>
+        </a>
+
+        <a class="card" href="/research">
+            <h3>Research Paper Explainer</h3>
+            <p>Explain papers in beginner-friendly language.</p>
+        </a>
+
+        <a class="card" href="/notes">
+            <h3>Notes Generator</h3>
+            <p>Generate notes, MCQs and questions.</p>
+        </a>
+
+        <a class="card" href="/resume">
+            <h3>Resume Analyzer</h3>
+            <p>Analyze resume and improve ATS score.</p>
+        </a>
+
+        <a href="/planner" class="feature-card">
+            <h3>Study Planner AI</h3>
+            <p>Generate personalized study schedules.</p>
+        </a>
+    </div>
+</section>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

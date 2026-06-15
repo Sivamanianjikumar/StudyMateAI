@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="animated-bg">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+{% include 'navbar.html' %}
+
+<section class="page">
+    <h1>PDF Chatbot</h1>
+    <p>Upload your PDF and ask questions from it.</p>
+
+    <div class="upload-box">
+        <input type="file" id="pdfFile" accept=".pdf">
+        <button onclick="uploadPDF()">Upload PDF</button>
+        <p id="uploadStatus"></p>
+    </div>
+
+    <div class="chat-box">
+        <select id="mode">
+            <option value="pdf">PDF Only</option>
+            <option value="general">PDF + General AI</option>
+        </select>
+    
+        <input type="text" id="question" placeholder="Ask a question...">
+    
+        <button onclick="askQuestion()">Ask</button>
+    </div>
+    
+    <div class="result-card">
+
+        <div class="result-title">
+            AI Answer
+        </div>
+    
+        <div id="answer" class="result-content">
+        </div>
+    
+    </div>
+</section>
+
+<script src="/static/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>

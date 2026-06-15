@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <h1>My Profile</h1>
+
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ username }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h2>{{ total_chats }}</h2>
+                <p>Total Chats</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>{{ total_notes }}</h2>
+                <p>Notes Generated</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>{{ total_research }}</h2>
+                <p>Research Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>{{ total_plans }}</h2>
+                <p>Study Plans</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
